@@ -2,6 +2,7 @@ class Api::V1::ErasController < ApplicationController
 
   def index
     ## in fetch request when getting this action we want it to show all the eras
+ 
     @eras = Era.all
     render json: @eras
 
