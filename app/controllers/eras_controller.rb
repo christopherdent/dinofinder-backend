@@ -1,0 +1,2 @@
+class ErasController < ApplicationController
+end
