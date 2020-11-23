@@ -1,2 +1,0 @@
-class DinosaursController < ApplicationController
-end
