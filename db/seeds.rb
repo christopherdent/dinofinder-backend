@@ -12,20 +12,20 @@ Era.create(name: 'Jurassic', picture_url: 'https://upload.wikimedia.org/wikipedi
 Era.create(name: 'Cretaceous', picture_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Scotese_105_ma.png/360px-Scotese_105_ma.png')
 
 
-DinoType.create(name: 'Triassic Herbivore', era_id: 1)
-DinoType.create(name: 'Triassic Carnivore', era_id: 1)
-DinoType.create(name: 'Triassic Avian', era_id: 1)
-DinoType.create(name: 'Triassic Marine', era_id: 1)
+DinoType.create(name: 'Triassic Herbivore', picture_url: 'https://drive.google.com/uc?id=1hxSKZZxDiXlLj1ER3U8yZAFrwMxC0IWB', era_id: 1)
+DinoType.create(name: 'Triassic Carnivore', picture_url: 'https://drive.google.com/uc?id=1eWJ99N6d0qpL2kj6xNai6lTm33TXKVH5', era_id: 1)
+DinoType.create(name: 'Triassic Avian', picture_url: 'https://drive.google.com/uc?id=1DZVVRpkdt8VNDP6BL-UTbYo9SXx3YvFB', era_id: 1)
+DinoType.create(name: 'Triassic Marine', picture_url: 'https://drive.google.com/uc?id=1kZjSzFmhOis5KhWuwbKsV1UhFbjhXqWG', era_id: 1)
 
-DinoType.create(name: 'Jurassic Herbivore', era_id: 2)
-DinoType.create(name: 'Jurassic Carnivore', era_id: 2)
-DinoType.create(name: 'Jurassic Avian', era_id: 2)
-DinoType.create(name: 'Jurassic Marine', era_id: 2)
+DinoType.create(name: 'Jurassic Herbivore', picture_url: 'https://drive.google.com/uc?id=1hxSKZZxDiXlLj1ER3U8yZAFrwMxC0IWB', era_id: 2)
+DinoType.create(name: 'Jurassic Carnivore', picture_url: 'https://drive.google.com/uc?id=1eWJ99N6d0qpL2kj6xNai6lTm33TXKVH5', era_id: 2)
+DinoType.create(name: 'Jurassic Avian', picture_url: 'https://drive.google.com/uc?id=1DZVVRpkdt8VNDP6BL-UTbYo9SXx3YvFB', era_id: 2)
+DinoType.create(name: 'Jurassic Marine', picture_url: 'https://drive.google.com/uc?id=1kZjSzFmhOis5KhWuwbKsV1UhFbjhXqWG', era_id: 2)
 
-DinoType.create(name: 'Cretaceous Herbivore', era_id: 3)
-DinoType.create(name: 'Cretaceous Carnivore', era_id: 3)
-DinoType.create(name: 'Cretaceous Avian', era_id: 3)
-DinoType.create(name: 'Cretaceous Marine', era_id: 3)
+DinoType.create(name: 'Cretaceous Herbivore', picture_url: 'https://drive.google.com/uc?id=1hxSKZZxDiXlLj1ER3U8yZAFrwMxC0IWB', era_id: 3)
+DinoType.create(name: 'Cretaceous Carnivore', picture_url: 'https://drive.google.com/uc?id=1eWJ99N6d0qpL2kj6xNai6lTm33TXKVH5', era_id: 3)
+DinoType.create(name: 'Cretaceous Avian', picture_url: 'https://drive.google.com/uc?id=1DZVVRpkdt8VNDP6BL-UTbYo9SXx3YvFB', era_id: 3)
+DinoType.create(name: 'Cretaceous Marine', picture_url: 'https://drive.google.com/uc?id=1kZjSzFmhOis5KhWuwbKsV1UhFbjhXqWG', era_id: 3)
 ##sizes are feet, weight are lbs
 ##triassic seed dinos
 Dinosaur.create(name: 'Thecodontosaurus', size: 6, weight: 24, temporal_range: '203.6–201.3 MYA', year_discovered: '1836', picture_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/Thecondontosaurus_life_restoration_2018.jpg', summary: 'This dinosaurs hands and feet each had five digits, and the hands were long and rather narrow, with an extended claw on each. This dinosaurs front limbs were much shorter than the legs, and its tail was much longer than the head, neck and body put together.', dino_type_id: 1)

@@ -17,13 +17,6 @@ before_action :set_era
     render json: @dino_type
   end
 
-  def create
-  end
-
-  def destroy
-    # @dino_type = DinoType.find(params[:id])
-    # @dino_type.destroy
-  end
 
 private
 
@@ -32,7 +25,7 @@ private
   end
 
   def dino_type_params
-    params.require(:dino_type).permit(:name, :era_id)
+    params.require(:dino_type).permit(:name, :era_id, :picture_url)
   end
 
 

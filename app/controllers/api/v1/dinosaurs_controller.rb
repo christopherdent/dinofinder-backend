@@ -9,7 +9,7 @@ before_action :set_dino_type
   end
 
   def create
-    @dinosaur = Dinosaur.new(dinosaur_params)
+      @dinosaur = Dinosaur.new(dinosaur_params)
     if @dinosaur.save
       render json: @dinosaur
     else
@@ -24,8 +24,12 @@ before_action :set_dino_type
   end
 
   def destroy
-    @dinosaur = Dinosaud.find(params[:id])
+     @dinosaur = Dinosaur.find(params[:id])
     @dinosaur.destroy
+
+    @dinosaurs = Dinosaur.find_by(dino_type_id: params['dino_type_id'])
+    render json: @dinosaurs
+
   end
 
 private

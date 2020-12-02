@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_010131) do
 
   create_table "dino_types", force: :cascade do |t|
     t.string "name"
+    t.string "picture_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "era_id"
