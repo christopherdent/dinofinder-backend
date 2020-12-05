@@ -17,6 +17,18 @@ before_action :set_dino_type
     end
   end
 
+  def update
+
+       @dinosaur = Dinosaur.find(params[:id])
+       @dinosaur.update(dinosaur_params)
+
+       if @dinosaur.save
+         render json: @dinosaur
+       else
+         render json: {error: 'Error editing dinosaur'}
+       end
+  end
+
   def show
     # @dinosaur = Dinosaur.find(params[:id])
     @dinosaur = @dino_type.dinosaurs.find_by(id: params[:id])
