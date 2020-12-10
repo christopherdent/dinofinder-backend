@@ -10,6 +10,7 @@ before_action :set_dino_type
 
   def create
       @dinosaur = Dinosaur.new(dinosaur_params)
+
     if @dinosaur.save
       render json: @dinosaur
     else
@@ -18,7 +19,6 @@ before_action :set_dino_type
   end
 
   def update
-
        @dinosaur = Dinosaur.find(params[:id])
        @dinosaur.update(dinosaur_params)
 
@@ -52,7 +52,7 @@ end
 
 
   def dinosaur_params
-    params.require(:dinosaur).permit(:name, :size, :weight, :temporal_range, :year_discovered, :picture_url, :summary, :dino_type_id)
+    params.require(:dinosaur).permit(:id, :name, :size, :weight, :temporal_range, :year_discovered, :picture_url, :summary, :dino_type_id)
   end
 
 
