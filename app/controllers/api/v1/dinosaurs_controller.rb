@@ -3,7 +3,6 @@ before_action :set_dino_type
 
 
   def index
-    # @dinosaurs = Dinosaur.all
     @dinosaurs = @dino_type.dinosaurs
     render json: @dinosaurs
   end
@@ -19,7 +18,8 @@ before_action :set_dino_type
   end
 
   def update
-       @dinosaur = Dinosaur.find(params[:id])
+
+       @dinosaur = Dinosaur.find(dinosaur_params[:id])
        @dinosaur.update(dinosaur_params)
 
        if @dinosaur.save
@@ -30,13 +30,12 @@ before_action :set_dino_type
   end
 
   def show
-    # @dinosaur = Dinosaur.find(params[:id])
     @dinosaur = @dino_type.dinosaurs.find_by(id: params[:id])
     render json: @dinosaur
   end
 
   def destroy
-     @dinosaur = Dinosaur.find(params[:id])
+   @dinosaur = Dinosaur.find(params[:id])
     @dinosaur.destroy
 
     @dinosaurs = Dinosaur.find_by(dino_type_id: params['dino_type_id'])
