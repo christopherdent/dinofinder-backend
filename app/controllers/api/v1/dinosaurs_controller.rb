@@ -9,7 +9,7 @@ before_action :set_dino_type
 
   def create
       @dinosaur = Dinosaur.new(dinosaur_params)
-
+   
     if @dinosaur.save
       render json: @dinosaur
     else
