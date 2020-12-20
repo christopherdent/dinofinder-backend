@@ -9,7 +9,7 @@ before_action :set_dino_type
 
   def create
       @dinosaur = Dinosaur.new(dinosaur_params)
-   
+
     if @dinosaur.save
       render json: @dinosaur
     else
@@ -21,8 +21,7 @@ before_action :set_dino_type
 
        @dinosaur = Dinosaur.find(dinosaur_params[:id])
        @dinosaur.update(dinosaur_params)
-
-       if @dinosaur.save
+        if @dinosaur.save
          render json: @dinosaur
        else
          render json: {error: 'Error editing dinosaur'}
