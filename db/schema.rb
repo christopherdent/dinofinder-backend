@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2020_11_23_010131) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "dino_types", force: :cascade do |t|
     t.string "name"
     t.string "picture_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "era_id"
+    t.bigint "era_id"
     t.index ["era_id"], name: "index_dino_types_on_era_id"
   end
 
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_010131) do
     t.string "summary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "dino_type_id"
+    t.bigint "dino_type_id"
     t.index ["dino_type_id"], name: "index_dinosaurs_on_dino_type_id"
   end
 

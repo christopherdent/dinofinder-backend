@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Era.create(name: 'Triassic', picture_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Scotese_220_ma.png/360px-Scotese_220_ma.png')  ##consider giving Eras a photo_url that can show the earth as it was then in their component when app loads
-Era.create(name: 'Jurassic', picture_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Scotese_170_ma.png/360px-Scotese_170_ma.png')
-Era.create(name: 'Cretaceous', picture_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Scotese_105_ma.png/360px-Scotese_105_ma.png')
+Era.create(name: 'Triassic', picture_url: 'https://dinofinder2020.s3.amazonaws.com/triassic.jpeg')  ##consider giving Eras a photo_url that can show the earth as it was then in their component when app loads
+Era.create(name: 'Jurassic', picture_url: 'https://dinofinder2020.s3.amazonaws.com/jurassic.jpeg')
+Era.create(name: 'Cretaceous', picture_url: 'https://dinofinder2020.s3.amazonaws.com/cretaceous.jpeg')
 
 
 DinoType.create(name: 'Triassic Herbivore', picture_url: 'https://drive.google.com/uc?id=1hxSKZZxDiXlLj1ER3U8yZAFrwMxC0IWB', era_id: 1)

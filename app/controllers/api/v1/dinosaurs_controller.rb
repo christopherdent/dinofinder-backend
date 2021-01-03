@@ -45,7 +45,7 @@ before_action :set_dino_type
 private
 
 def set_dino_type
-  @dino_type = DinoType.find(params[:dino_type_id])
+  @dino_type = DinoType.find(params[:dino_type_id])  
 end
 
 

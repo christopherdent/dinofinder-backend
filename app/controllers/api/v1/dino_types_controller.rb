@@ -12,7 +12,6 @@ before_action :set_era
 
 
   def show
-    # @dino_type = DinoType.find(params[:id])
     @dino_type = @era.dino_types.find_by(id: params[:id])
     render json: @dino_type
   end
