@@ -42,3 +42,12 @@ Dinosaur.create(name: 'Alamosaurus', size: 98, weight: 176370, temporal_range: '
 Dinosaur.create(name: 'Tyrannosaurus Rex', size: 20, weight: 31000, temporal_range: '70-66 MYA', year_discovered: 1905, picture_url: 'https://ichef.bbci.co.uk/news/800/cpsprodpb/22C9/production/_110850980_059864995-1.jpg', summary: "This was a very hungry dinosaur.", dino_type_id: 10)
 Dinosaur.create(name: 'Quetzalcoatlus', size: 30, weight: 100, temporal_range: '70-66 MYA', year_discovered: 1974, picture_url: 'https://static.wikia.nocookie.net/dinosaurs/images/5/58/QuetzalcoatlusReal.jpg/revision/latest/scale-to-width-down/340?cb=20180411192342', summary: "test", dino_type_id: 11)
 Dinosaur.create(name: 'Halisaurus', size: 13, weight: 500, temporal_range: '86-65 MYA', year_discovered: 1869, picture_url: 'https://static.wikia.nocookie.net/prehistoric-earth-a-natural-history/images/5/54/157B6E19-6AFA-48AD-ABAD-AFFF1EB82AF6.jpeg/revision/latest/top-crop/width/360/height/450?cb=20181106023251', summary: "Thought to be closely related to snakes, mosasaurs had extremely long tails (up to half their body length) and swallowed their prey whole. Widespread throughout the world, they diversified into an amazing variety of species, from small coastal dwellers like Halisaurus to monstrous open water predators.  I would not want to meet him on the beach.", dino_type_id: 12)
+
+
+chris = User.create(name: "Chris", email: "christopherdent01@gmail.com", password: "password")
+joe = User.create(name: "Joe", email: "jojo@gmail.com", password: "password")
+
+chris.secrets.create(content: "I am a secret")
+chris.secrets.create(content: "I find HB very annoying")
+joe.secrets.create(content: "I love music")
+joe.secrets.create(content: "I like kool aid")
