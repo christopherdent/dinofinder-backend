@@ -43,3 +43,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry'
 gem 'rack-cors'
 gem 'active_model_serializers'
+gem 'dotenv-rails'

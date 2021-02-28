@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
 
       @user = User.find_by(email: params[:user][:email])
       if @user && @user.authenticate(params[:user][:password])
-
+        # if user is authenticated, generate  jwt and include that jwt in response back to client.  also include user in response.  
         render json: @user
       else
         render json: {
