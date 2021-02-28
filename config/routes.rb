@@ -17,10 +17,14 @@ namespace :api do
       end
     end
 
+    namespace :api do
+      namespace :v1 do
+        resources :secrets
+        resources :users
+        end
+      end
 
-    resources :secrets
-    resources :users
-    
+
 
 end
 

@@ -3,7 +3,7 @@ class Api::V1::SecretsController < ApplicationController
 
   # GET /secrets
   def index
-    if logged_in?
+    if logged_in?  ### Need to create logged in method or your fetch to this wont work
       @secrets = current_user.secrets
       render json: @secrets, status: :ok
     else
@@ -14,43 +14,43 @@ class Api::V1::SecretsController < ApplicationController
  end
   #
   # # GET /secrets/1
-  # def show
-  #   render json: @secret
-  # end
+  def show
+    render json: @secret
+  end
   #
   # # POST /secrets
-  # def create
-  #   @secret = Secret.new(secret_params)
-  #
-  #   if @secret.save
-  #     render json: @secret, status: :created, location: @secret
-  #   else
-  #     render json: @secret.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def create
+    @secret = Secret.new(secret_params)
+
+    if @secret.save
+      render json: @secret, status: :created, location: @secret
+    else
+      render json: @secret.errors, status: :unprocessable_entity
+    end
+  end
   #
   # # PATCH/PUT /secrets/1
-  # def update
-  #   if @secret.update(secret_params)
-  #     render json: @secret
-  #   else
-  #     render json: @secret.errors, status: :unprocessable_entity
-  #   end
-  # end
+  def update
+    if @secret.update(secret_params)
+      render json: @secret
+    else
+      render json: @secret.errors, status: :unprocessable_entity
+    end
+  end
   #
   # # DELETE /secrets/1
-  # def destroy
-  #   @secret.destroy
-  # end
-  #
+  def destroy
+    @secret.destroy
+  end
+
   # private
-  #   # Use callbacks to share common setup or constraints between actions.
-  #   def set_secret
-  #     @secret = Secret.find(params[:id])
-  #   end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_secret
+      @secret = Secret.find(params[:id])
+    end
   #
   #   # Only allow a trusted parameter "white list" through.
-  #   def secret_params
-  #     params.require(:secret).permit(:content, :user_id)
-  #   end
+    def secret_params
+      params.require(:secret).permit(:content, :user_id)
+    end
 end
