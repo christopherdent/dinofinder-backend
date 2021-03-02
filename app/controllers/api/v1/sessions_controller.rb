@@ -4,12 +4,19 @@ class Api::V1::SessionsController < ApplicationController
 
       @user = User.find_by(email: params[:user][:email])
       if @user && @user.authenticate(params[:user][:password])
-        # if user is authenticated, generate  jwt and include that jwt in response back to client.  also include user in response.  
-        render json: @user
+        # if user is authenticated, generate  jwt and include that jwt in response back to client.  also include user in response.
+        token = generate_token({ id: @user.id })
+        resp = {
+            user: user_serializer(@user),
+            jwt: token
+          }
+          render json: resp
       else
-        render json: {
-          error: "Invalid credentials"
-        }, status: :unauthorized
+        resp = {
+          error: "Invalid credentials",
+          details: @user.errors.full_messages
+        }
+        render json: resp, status: :unauthorized
       end
     end
 

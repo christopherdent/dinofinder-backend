@@ -12,6 +12,7 @@ namespace :api do
 
   namespace :api do
     namespace :v1 do
+        get '/get_current_user', to: 'sessios#get_current_user'
         post 'login', to: 'sessions#create'
         delete '/logout', to: 'sessions#destroy'
       end
